@@ -1,0 +1,80 @@
+<h2>📌Informații Utilizator</h2>
+<p>Completează formularul de mai jos pentru a te înregistra.</p>
+<!--<form id="inregistrareForm" onsubmit="event.preventDefault(); trimiteInregistrare();">-->
+    <form id="inregistrareForm" >
+  <fieldset>
+    <legend>Info generale</legend>
+    <label for="nume">Nume:</label>
+    <input type="text" id="nume" name="nume"><br><br>
+    
+    <label for="prenume">Prenume:</label>
+    <input type="text" id="prenume" name="prenume"><br><br>
+    
+    <label for="username">Nume utilizator:</label>
+    <input type="text" id="username" name="username"><br><br>
+    
+    <label for="password">Parola:</label>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon"><br><br>
+  </fieldset>
+  
+  <br>
+  
+  <fieldset>
+    <legend>Info personale</legend>
+    <label for="sex">Sex:</label>
+    <select id="sex" name="sex">
+      <option value="masculin">Masculin</option>
+      <option value="feminin">Feminin</option>
+      <option value="altul">Altul</option>
+    </select><br><br>
+    
+    <label for="animal">Animal preferat:</label>
+    <input list="animal" id="animal_pref" name="animal_pref">
+    <datalist id="animal">
+      <option value="caine">
+      <option value="pisica">
+      <option value="hamster">
+      <option value="papagal">
+      <option value="peste">
+      <option value="iepure">
+      <option value="cal">
+      <option value="vaca">
+      <option value="oaie">
+      <option value="capra">
+      <option value="gaina">
+      <option value="urs">
+      <option value="lup">
+      <option value="vulpe">
+      <option value="veverita">
+      <option value="chinchilla">
+    </datalist><br><br>
+    
+    <label for="color">Preferință culoare animal:</label>
+    <input type="color" id="color" name="color"><br><br>
+    
+    <label for="data_nasterii">Data nasterii:</label>
+    <input type="date" id="data_nasterii" name="data_nasterii"><br><br>
+    
+    <label for="ora_nasterii">Ora nasterii:</label>
+    <input type="time" id="ora_nasterii" name="ora_nasterii"><br><br>
+    
+    <label for="varsta">Varsta:</label>
+    <input type="range" id="varsta" name="varsta" min="0" max="100"><br><br>
+    
+    <label for="pagina_pers">Pagina personala:</label>
+    <input type="url" id="pagina_pers" name="pagina_pers"><br><br>
+    
+    <label for="descriere">Descriere:</label>
+    <textarea id="descriere" name="descriere"></textarea><br><br>
+    <button onclick="trimiteInregistrare()" type="button">Înregistrează</button>
+  </fieldset>
+  
+
+</form>
+<div id="rezultatInregistrare"></div>

@@ -1,0 +1,105 @@
+
+        <h2>🔗 Învățam despre animale</h2>
+        <aside>
+            <a href="#section1">💡 Secțiunea 1: Informații despre sistem</a>
+
+            <a href="#section2">💡 Secțiunea 2: Canvas Creativ</a>
+
+            <a href="#section3">💡 Secțiunea 3: Modificare Tabel Pisici</a>
+            
+        </aside>
+
+        <section id="section1"> 
+            <h3> Secțiunea 1 - Informații despre sistem 🌐</h3>
+
+            <p> ⚙️ Aici găsești informații detaliate despre sistemul tău. Aceste date îți vor arăta mai multe despre <b>mediul în care navighezi</b>, cum ar fi data curentă și alte informațiile tehnice.</p>
+            <p><strong>Data curentă:</strong> <span id="date"></span></p>
+            <p id = "url" ></p>
+            <p id = "locationInfo" ></p>
+            <p id = "browser" ></p>
+            <p id = "os" ></p>
+        </section>
+
+        <section id="section2"> 
+            <h3> Secțiunea 2 - Canvas Creativ 🎨 </h3>
+
+            <p>Aici poți crea forme geometrice direct pe canvas! Alege o formă și culoarea dorită pentru a desena.</p>
+            <p><b> ✔️ Nu uita să adaugi ochii pisicii pentru a <i>finaliza desenul!</i></b></p>
+            <canvas id="myCanvas" width="500" height="500" onclick="draw(event)"></canvas>
+            <br>
+            <br>
+
+            <label for="shapeSelector"><b>Alege forma:</b></label>
+            <input type="radio" id="rectangle" name="shape" value="rectangle" checked>
+            <label for="rectangle">Dreptunghi</label>
+            <input type="radio" id="circle" name="shape" value="circle">
+            <label for="circle">Cerc</label><br><br>
+
+
+            <label for="fillColor"><b>Culoare de umplere:</b></label>
+            <input type="color" id="fillColor" name="fillColor" value="#000000"> <br> <br>
+
+            <label for="favcolor"><b>Culoare contur:</b></label>
+            <input type="color" id="favcolor" name="favcolor" value="#000000"> <br>
+
+        </section>
+
+        <section id="section3"> 
+            <h3> Secțiunea 3 - Modificare Tabel Pisici 🐱 </h3>
+
+            <p> Aici poți vizualiza informațiile despre diferite rase de pisici. De asemenea, ai posibilitatea să adaugi noi rânduri sau coloane în tabelul cu rase de pisici.</p>
+
+            <p> 🐈 Mai jos este un tabel cu informații utile despre rasele de <b>pisici:</b></p>
+
+            <table id="myTable" border="1">
+                <tr>
+                    <th>Rasa</th>
+                    <th>Vârstă Medie</th>
+                    <th>Culoare Blană</th>
+                    <th>Caracteristici Speciale</th>
+                </tr>
+                <tr>
+                    <td>Siameză</td>
+                    <td>12-20 ani</td>
+                    <td>Bej cu puncte maro închis la urechi, bot, coadă și labe</td>
+                    <td>Se remarcă prin personalitatea activă și vorbăreață</td>
+                </tr>
+                <tr>
+                    <td>Persană</td>
+                    <td>12-17 ani</td>
+                    <td>Blană lungă și pufoasă, de obicei albă, gri sau portocalie</td>
+                    <td>Temperament calm, dar necesită îngrijire regulată a blănii</td>
+                </tr>
+                <tr>
+                    <td>Maine Coon</td>
+                    <td>10-15 ani</td>
+                    <td>Blană lungă și densă, colorată în diverse nuanțe (marron, negru, gri)</td>
+                    <td>Una dintre cele mai mari rase de pisici, prietenoasă și jucăușă</td>
+                </tr>
+                <tr>
+                    <td>Scottish Fold</td>
+                    <td>11-15 ani</td>
+                    <td>Blană scurtă sau lungă, cu culori variate</td>
+                    <td>Urechi mici și pliate, temperament liniștit și afectuos</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <p><strong>❗ Important:</strong> Înainte de a adăuga o linie sau o coloană, asigură-te că ai selectat poziția corespunzătoare și ai ales culoarea de fundal dorită pentru celulele adăugate.</p>
+
+
+            <fieldset>
+
+                <label for="position"><b>Poziția liniei/coloanei</b></label>
+                <input type="number" id="position" value="0" min="0"><br><br>
+
+                <label for="bgColor"><b>Culoare fundal:</b></label>
+                <input type="color" id="bgColor" value="#000000"><br><br>
+
+                <button onclick="insertRow()">Inserare linie</button> <br>
+                <button onclick="insertColumn()">Inserare coloană</button>
+
+            </fieldset>
+        
+    </section>

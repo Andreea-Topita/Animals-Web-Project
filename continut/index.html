@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/stil.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- functie pentru single page app-->
+        <script> 
+            //functie pentru a schimba continutul paginii
+            async function schimbaContinut(resursa,jsFisier,jsFunctie) {
+                try {
+                    //fetch pentru a face ocerere http get catre fisier , await suspenda ex pana cand fetch returneaza un promise
+
+                const response = await fetch(resursa+'.html');
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+                //converteste corpul raspunsului http intr un sir de caractere
+                const content = await response.text();
+                //cont descarcat in consola 
+                console.log(content);
+
+                //actulizare continut din dom 
+                //gaseste continut si ii seteaza proprietatea innerHTML cu continutul descarcat
+                document.getElementById('continut').innerHTML = content;
+                //if (jsFisier&& !document.querySelector(`script[src="${jsFisier}"]`)) {
+                if(jsFisier){
+                    //dorim sa incarcam si un script suplimentar 
+                    var elementScript = document.createElement('script');
+                    //const elementScript = document.createElement('script');
+                    elementScript.onload = function () {
+                        //executata dupa ce fisierul js a fost incarcat complet, hello - script incarcat cu succes
+                    console.log("hello");
+                    
+                    if (jsFunctie) {
+                        //se acceseaza functia 
+                        //permite rularea unei functii suplimentare dupa ce scriptul a fost incarcat 
+                        window[jsFunctie]();
+                    }
+                    };
+                    //se seteaza sursa, scirptul se adauga in sectiunea head a documentului
+                    elementScript.src = jsFisier;
+                    document.head.appendChild(elementScript);
+                    } else {
+                        //daca js nu e furnizat, dar js functie
+                    if (jsFunctie) {
+                    window[jsFunctie]();
+                    }
+                    }
+
+                } catch (error) {
+                console.error(error.message);
+                }
+            } 
+          </script>
+    </head>
+    <body onload="schimbaContinut('acasa')">
+        <header>
+            <h1>O Călătorie în Lumea Fascinantă a Animalelor</h1>
+            <nav>
+                <a onclick="schimbaContinut('acasa')">Acasă</a>
+                <a onclick="schimbaContinut('despre')">Despre</a>
+                <a onclick="schimbaContinut('inregistreaza','js/script.js','trimiteInregistrare')">Înregistrează</a>
+                <a onclick="schimbaContinut('video')">Video</a>
+                <a onclick="schimbaContinut('desen')">Desen</a>
+                <a onclick="schimbaContinut('invat','js/script.js','section1')">Învăț</a>
+                <a onclick="schimbaContinut('animale', 'js/animale.js', 'incarcaAnimale')">Animale</a>
+                <a onclick="schimbaContinut('verifica', 'js/animale.js','verificaUtilizator')">Verifică</a>
+                <a onclick="schimbaContinut('cumparaturi','js/cumparaturi.js')">Cumpărături</a>
+            </nav>
+        </header>
+        <main id="continut">
+        
+
+           
+        </main>
+        
+
+    </body>
+    <footer>
+        <hr> &copy 2025. Programare Web </hr>
+    </footer>
+</html>

@@ -1,0 +1,33 @@
+<h2>Lista de Cumpărături pentru Animale🐶</h2>
+  
+<form id="formularCumparaturi">
+  <label for="numeProdus">Nume produs:</label>
+  <input type="text" id="numeProdus" name="numeProdus" required>
+  
+  <label for="cantitateProdus">Cantitate:</label>
+  <input type="text" id="cantitateProdus" name="cantitateProdus" required>
+
+
+  <button onclick="adaugaProdus()" type="button">Adaugă</button>
+</form>
+
+<div style="text-align: center;">
+    <label for="storageChoice">Alege metoda de stocare:</label>
+    <select id="storageChoice">
+      <option value="localStorage">localStorage</option>
+      <option value="indexedDB">IndexedDB</option>
+    </select>
+  </div>
+
+
+<table id="listaCumparaturi"  >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Cantitate</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>

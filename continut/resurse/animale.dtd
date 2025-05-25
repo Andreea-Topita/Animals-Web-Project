@@ -1,0 +1,19 @@
+<!ELEMENT animale (animal+)>
+<!ELEMENT animal (nume,varsta,tip,greutate,culoare,rasa,proprietar,informatii,adresa?)>
+<!ATTLIST animal id NMTOKEN #REQUIRED>
+<!ELEMENT nume (#PCDATA)>
+<!ELEMENT varsta (#PCDATA)>
+<!ELEMENT tip (#PCDATA)>
+<!ELEMENT greutate (#PCDATA)>
+<!ELEMENT culoare (#PCDATA)>
+<!ELEMENT rasa (#PCDATA)>
+<!ELEMENT proprietar (#PCDATA)>
+<!ELEMENT informatii (telefon,email,varsta)>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT adresa (strada,numar,localitate,judet,tara)>
+<!ELEMENT strada (#PCDATA)>
+<!ELEMENT numar (#PCDATA)>
+<!ELEMENT localitate (#PCDATA)>
+<!ELEMENT judet (#PCDATA)>
+<!ELEMENT tara (#PCDATA)>

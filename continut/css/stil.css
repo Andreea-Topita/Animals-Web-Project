@@ -1,0 +1,485 @@
+*{
+    box-sizing: border-box;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto; /* pentru a mentine proportiile */
+  }
+  
+body {
+    margin:0;
+    background: linear-gradient(to right, rgba(251, 229, 241, 0.664), rgba(250, 201, 250, 0.623)), 
+                url('../imagini/glamour1.jpg');              
+    background-size: cover;
+    color:#000000;
+    padding: 0;
+    
+} 
+
+header h1, header h2, header h3 {
+    position: relative;
+    color: #000000; 
+}
+
+header h1{
+    margin:0px;
+    color: #000000;
+    text-align: center;
+    font-size:35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    margin:10px;
+    color: #000000;
+    font-size:27px;
+    text-align: center;
+}
+
+header h3{
+    margin:0px;
+    color: #000000;
+    font-size:100px;
+}
+
+header,main,footer{
+    padding: 0 10px;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+}
+
+footer {
+    padding: 10px;
+}
+
+main {
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    font-size: 17px;
+}
+
+nav {
+    display: flex;
+    justify-content:space-around;
+    background-color: #dcd6fcb0;
+    border: 1px solid #000000; 
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(79, 35, 72, 0.263);
+    
+    position: relative;
+}
+
+nav a:hover {
+    color: #905066;
+    transform: scale(1.10);
+}
+
+nav a{
+    text-decoration:none;
+    color: #000000;
+    font-weight: bold;
+    margin: 0 10px;
+
+    transform: translateY(-2px); /* efect de ridicare*/
+    transition: transform 0.3s ease;
+}
+
+/* pseudo element  */
+h1::after {
+    content: "🎀"; 
+    margin-left: 5px;
+    display: inline-block;
+    animation: rotireFundita 1.3s infinite ease-in-out;
+}
+
+
+@keyframes rotireFundita {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* formatare tabel din despre */
+#despre #tableDesp{
+    width: 50%;
+    margin: 27px;
+    border-collapse: collapse;
+    background-color: #ffffffa1;
+    box-shadow: 0  0 20px rgba(66, 0, 32, 0.505);
+}
+
+#despre #tableDesp th, #despre #tableDesp td {
+    border: 1px solid #44214ba3;
+    padding: 12px;
+    text-align: center;
+}
+
+#despre #tableDesp th {
+    background-color: #fcba96d4;
+    font-size: 18px;
+}
+#despre #tableDesp tr:hover {
+    background-color: #fcba96d4;
+}
+
+/* formatare formular inregistrare  */
+
+input, select, textarea {
+    /* width: 250px; */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+input:focus, select:focus, textarea:focus {
+    border: solid #000000;
+    outline: none;
+}
+
+
+fieldset {
+    border: 1.5px solid #4b264ede;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #000000b9;
+}
+
+label {
+    /* display: block; */
+    margin-bottom: 5px;
+}
+
+
+button {
+    font-size: 15px;
+    padding: 4px 12px;      
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: background-color 0.3s;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgba(209, 29, 237, 0.516);
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* tranzitii */
+img {
+    transition: transform 0.3s ease;
+    padding: 17px;
+}
+/* pseudo clasa */
+img:hover {
+    transform: scale(1.13); 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Așează imaginile pe centru */
+    gap: 10px; /* Spațiere între imagini */
+}
+
+/* CSS Media Queries */
+
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    footer, header {
+        /* ascundere header si footer la print */
+        display: none; 
+    }
+
+    main {
+        /* pt a folosi toata latimea paginii */
+        width: 100%; 
+    }
+
+    table {
+        /* tabelele au 60% din latimea paginii */
+        border-collapse: collapse;
+        width: 60%; 
+    }
+
+    table th, table td {
+        /* spatiu intern */
+        padding: 8px;
+    }
+
+    nav {
+        /* ascunde meniul , nu e necesar */
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        /* ca sa arate bine pe ecran */
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    nav a {
+        /* marg verticala */
+        margin: 10px 0; 
+      }
+    .video-gallery {
+        /* latimea la 100% */
+        width: 100%;
+        padding: 10px;
+      }
+    .video-gallery .video-item iframe {
+        max-width: 100% !important; 
+        /* forteaza ca videoul sa nu depaseasca latimea containerului flex */
+        height: auto !important;
+        /* ajutastare inaltime in functie de latime */
+      }
+
+    #listaCumparaturi {
+        width: 90%;  /* mai mult spatiu pe ecranul mic */
+    }
+    #formularCumparaturi {
+        flex-wrap: wrap; /* daca elementele stau prea la rand, se aranjeaza pe mai multe rânduri */
+    }
+    #formularCumparaturi label,
+    #formularCumparaturi input {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* video.html */
+
+
+.video-gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 20px;
+}
+
+.video-item {
+    background-color: #dcd6fcbe;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #4f4f47a0;
+    text-align: center;
+  }
+
+.video-gallery .video-item:nth-child(1) iframe {
+    width: 900px;
+    height: 600px;
+}
+.video-gallery .video-item:nth-child(2) iframe {
+    width: 600px;
+    height: 430px;
+}
+.video-gallery .video-item:nth-child(3) iframe {
+    width: 740px;
+    height: 550px;
+}
+
+.video-gallery .video-item:nth-child(4) iframe {
+    max-width: 560px;
+    height: 415px;
+  }
+  
+  .video-gallery .video-item:nth-child(5) iframe {
+    max-width: 440px;
+    height: 300px;
+  }
+
+/* lab 5 */
+#myCanvas {
+    background-color: rgb(255, 255, 255);
+}
+
+table#myTable {
+    width: 50%;
+    margin: 27px;
+    border-collapse: collapse;
+    background-color: #d2ceff94;
+    box-shadow: 0  0 20px rgba(53, 2, 75, 0.817);
+}
+
+#myTable th, #myTable  td {
+    border: 1px solid #000000a3;
+    padding: 20px;
+    text-align: center;
+}
+
+#myTable th {
+    background-color: hsla(284, 94%, 86%, 0.831);
+    font-size: 20px;
+}
+
+table#myTable tr:hover {
+    background-color: #f8bbe549;
+  }
+
+
+aside {
+    display: flex;
+    flex-direction:column;  
+    justify-content:space-evenly;  
+    /* text-align: center;   */
+    font-size: 19px; 
+}
+
+aside a {
+    text-decoration:none;
+    color: #000000;
+    font-weight: bold;
+    padding: 5px;
+
+}
+aside a:hover {
+    color: #905066;
+}
+/* lab 7 */
+
+.animal-table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color:  #d2ceff94;
+    box-shadow: 0  0 20px rgba(53, 2, 75, 0.817);
+}
+
+.animal-table th, .animal-table td {
+    border: 1px solid #000000a3;
+    padding: 20px;
+    text-align: center;
+}
+
+.animal-table th {
+    background-color: #f7e8f4;
+    font-size: 20px;
+}
+.animal-table tr:hover{
+    background-color:#f8c2e761 ;
+    transition: 0.3s ease-in-out;
+}
+
+#storageChoice {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#verificaForm {
+    width: 500px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fcf0fbf7;
+    box-shadow: 0  0 20px rgba(66, 0, 32, 0.505);
+}
+
+#verificaForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#verificaForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.butonVerifica button  {
+
+    background-color: #4bb14b; 
+    color: white;
+    font-size: 16px;
+    border:2px  black;
+    padding: 14px;
+    box-shadow: none;
+}
+.butonVerifica {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#rezultatVerificare {
+    width: 200px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* lab 8 */
+
+#formularCumparaturi {
+    display: flex;           
+    align-items: center;    
+    justify-content: center; 
+    /* flex-wrap: wrap;          */
+}
+
+#formularCumparaturi label,
+#formularCumparaturi input {
+    margin: 5px 10px; 
+    font-size: 18px; 
+}
+
+#formularCumparaturi button {
+    margin:10px;
+}
+
+/* tabel */
+
+#listaCumparaturi {
+
+    width: 65%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color:  #d2ceff94;
+    box-shadow: 0  0 20px rgba(53, 2, 75, 0.817);
+}
+  
+
+  #listaCumparaturi th,
+  #listaCumparaturi td {
+    border: 1px solid #000000a3;
+    padding: 20px;
+    text-align: center;    
+  }
+  
+
+  #listaCumparaturi th {
+    background-color: #f7e8f4;
+    font-size: 20px;
+}
+
+  #listaCumparaturi tr:hover {
+    background-color: #f8c2e761;
+    transition: 0.3s ease-in-out;
+}

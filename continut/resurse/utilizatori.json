@@ -1,0 +1,70 @@
+[
+    {
+        "username": "test",
+        "parola": "test"
+    },
+    {
+        "nume": "andreea",
+        "prenume": "top",
+        "username": "efw24",
+        "parola": "efberbebv",
+        "email": "andreea-loredana.topita@student.tuiasi.ro",
+        "telefon": "31414124124",
+        "sex": "feminin",
+        "animal_pref": "capra",
+        "culoare": "#785454",
+        "data_nasterii": "2003-07-23",
+        "ora_nasterii": "22:12",
+        "varsta": "72",
+        "pagina_pers": "https://github.com/Andreea-Topita",
+        "descriere": "idk"
+    },
+    {
+        "nume": "top",
+        "prenume": "andreea",
+        "username": "and",
+        "parola": "and",
+        "email": "andreea-loredana.topita@student.tuiasi.ro",
+        "telefon": "242141241241",
+        "sex": "masculin",
+        "animal_pref": "",
+        "culoare": "#000000",
+        "data_nasterii": "",
+        "ora_nasterii": "",
+        "varsta": "50",
+        "pagina_pers": "",
+        "descriere": ""
+    },
+    {
+        "nume": "matei",
+        "prenume": "ioana",
+        "username": "ioanam",
+        "parola": "23",
+        "email": "",
+        "telefon": "",
+        "sex": "masculin",
+        "animal_pref": "",
+        "culoare": "#000000",
+        "data_nasterii": "",
+        "ora_nasterii": "",
+        "varsta": "50",
+        "pagina_pers": "",
+        "descriere": ""
+    },
+    {
+        "nume": "ioanamatei",
+        "prenume": "sdff",
+        "username": "fsfwf",
+        "parola": "12414",
+        "email": "andreea-loredana.topita@student.tuiasi.ro",
+        "telefon": "3144141",
+        "sex": "masculin",
+        "animal_pref": "",
+        "culoare": "#000000",
+        "data_nasterii": "",
+        "ora_nasterii": "",
+        "varsta": "50",
+        "pagina_pers": "",
+        "descriere": ""
+    }
+]

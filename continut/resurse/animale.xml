@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE animale SYSTEM "animale.dtd">
+<animale>
+    <animal id="1">
+        <nume>Katty</nume>
+        <varsta>2</varsta>
+        <tip>pisica</tip>
+
+        <greutate>5</greutate>
+        <culoare>Neagra</culoare>
+        <rasa>Siameza</rasa>
+
+        <proprietar>Timisag Crina</proprietar>
+        
+        <informatii>
+            <telefon>0756782690</telefon>
+            <email>crinap@gmail.com</email>
+            <varsta>20</varsta>
+        </informatii>
+
+        <adresa>
+            <strada>Nicolina</strada>
+            <numar>7</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+
+    </animal>
+
+    <animal id="2">
+        <nume>Rex</nume>
+        <varsta>3</varsta>
+        <tip>caine</tip>
+
+        <greutate>7</greutate>
+        <culoare>Maro</culoare>
+        <rasa>Labrador</rasa>
+
+        <proprietar>Topita Andreea</proprietar>
+        
+        <informatii>
+            <telefon>0756782990</telefon>
+            <email>andreeatop@gmail.com</email>
+            <varsta>21</varsta>
+        </informatii>
+
+        <adresa>
+            <strada>Stefan cel Mare</strada>
+            <numar>7</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+
+    </animal>
+
+    <animal id="3">
+        <nume>Tom</nume>
+        <varsta>1</varsta>
+        <tip>pisica</tip>
+
+        <greutate>3</greutate>
+        <culoare>Alb</culoare>
+        <rasa>Europeana</rasa>
+
+        <proprietar>Ioana Matei</proprietar>
+        
+        <informatii>
+            <telefon>0755782990</telefon>
+            <email>ioana_matei@gmail.com</email>
+            <varsta>23</varsta>
+        </informatii>
+
+        <adresa>
+            <strada>Bucium</strada>
+            <numar>5</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+
+    </animal>
+
+    <animal id="4">
+        <nume>Oscar</nume>
+        <varsta>3</varsta>
+        <tip>hamster</tip>
+
+        <greutate>3</greutate>
+        <culoare>Bej</culoare>
+        <rasa>Hamster sirian</rasa>
+
+        <proprietar>Ana Ionescu</proprietar>
+        
+        <informatii>
+            <telefon>0729782940</telefon>
+            <email>ana_ionescu@gmail.com</email>
+            <varsta>21</varsta>
+        </informatii>
+
+        <adresa>
+            <strada>Basarabi</strada>
+            <numar>8</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+
+
+    </animal>
+</animale>
